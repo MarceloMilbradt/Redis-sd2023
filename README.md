@@ -91,7 +91,53 @@ Um conjunto Redis é uma coleção não ordenada de strings exclusivas (membros)
 
 para adicionarmos um item à um set, podemos usar ``SADD key value ``
 
+
+```
+SADD aluno:1:disciplinas 1
+SADD aluno:1:disciplinas 2
+```
+```
+SADD aluno:2:disciplinas 1
+```
+
+podemos obter os valores de um set usando ``SMEMBERS key ``
+```
+SMEMBERS  aluno:1:disciplinas
+```
+
 [Redis sets](https://redis.io/docs/data-types/sets/)
 
+### Hashes
+
+Os hashes do Redis são tipos de registro estruturados como coleções de pares de valores de campo. Você pode usar hashes para representar objetos básicos e armazenar agrupamentos de contadores, entre outras coisas.
+
+para criarmos um hash, podemos utilizar o comando ``HET key field value field value...``
+
+```
+HSET aluno:2 usuario Gian.Riske primeiroNome Gian ultimoNome Riske semestre 10
+```
+
+e para ler podemos usar ``HGET key field`` ou ``HGETALL key`` para obermos tudo
+
+```
+HGET aluno:2 usuario
+```
+```
+HGETALL aluno:2
+```
+[Redis hashes](https://redis.io/docs/data-types/hashes/)
+
+## Redis Pub/Sub
+
+Redis tambem funciona como sistema de mensagens/eventos
+com o comando ``SUBSCRIBE CHANNEL`` podemos escutar eventos despachados para este canal
+
+```
 subscribe canal1
-publish canal1
+```
+e para publicar-mos uma mensagem, utilizamos ``PUBLISH CHANNEL MESSAGE``
+
+```
+publish canal1 "Valor da mensagem"
+``` 
+[Redis Pub/Sub](https://redis.io/docs/manual/pubsub/)
