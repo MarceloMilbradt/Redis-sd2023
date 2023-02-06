@@ -6,7 +6,10 @@ Criando um container chamado ``redis`` na porta ```6379`` com base na imagem do 
 ```sudo docker run --name redis -p 6379:6379 redis```
 
 Acessando o redis com o comando ``redis-cli``
-```docker exec -it redis redis-cli```
+
+```
+docker exec -it redis redis-cli
+```
 
 ### Usando redis
 para definir uma chave é possivel usar o comando ``set key value``
