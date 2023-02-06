@@ -50,9 +50,28 @@ del chave1
 ```
 
 ## Tipo de dados
+
+### Strings
+As strings Redis armazenam sequências de bytes, incluindo texto, objetos serializados e matrizes binárias. Como tal, as strings são o tipo de dados Redis mais básico
+os exemplos mostrado acima, utilizam strings
+
+```
+set chave1 "meuValor"
+```
+```
+get chave1
+```
+
 ### Lists
 
+As listas do Redis são listas vinculadas de valores de string. As listas do Redis são frequentemente usadas para:
+- Implemente pilhas e filas.
+- Crie gerenciamento de filas para sistemas de trabalho em segundo plano.
 
+para adicionarmos valores na lista podemos usar ``LPUSH`` e para remover ``RPOP/LPOP``
+```
+
+```
 
 subscribe canal1
 publish canal1
