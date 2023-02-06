@@ -61,7 +61,7 @@ set chave1 "meuValor"
 ```
 get chave1
 ```
-[link](https://redis.io/docs/data-types/strings/){:target="_blank"}
+[Redis Strings](https://redis.io/docs/data-types/strings/)
 
 ### Lists
 
@@ -80,7 +80,18 @@ LPOP minhalista
 ```
 LLEN minhalista
 ```
-[link](https://redis.io/docs/data-types/lists/){:target="_blank"}
+[Redis lists](https://redis.io/docs/data-types/lists/)
+
+### Sets
+
+Um conjunto Redis é uma coleção não ordenada de strings exclusivas (membros). Você pode usar conjuntos Redis para:
+- Rastreie itens exclusivos (por exemplo, rastreie todos os endereços IP exclusivos que acessam uma determinada postagem de blog).
+- Representar relações (por exemplo, o conjunto de todos os usuários com um determinado papel).
+- Realize operações de conjuntos comuns, como interseção, uniões e diferenças.
+
+para adicionarmos um item à um set, podemos usar ``SADD key value ``
+
+[Redis sets](https://redis.io/docs/data-types/sets/)
 
 subscribe canal1
 publish canal1
