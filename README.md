@@ -61,6 +61,7 @@ set chave1 "meuValor"
 ```
 get chave1
 ```
+[link](https://redis.io/docs/data-types/strings/){:target="_blank"}
 
 ### Lists
 
@@ -68,10 +69,18 @@ As listas do Redis são listas vinculadas de valores de string. As listas do Red
 - Implemente pilhas e filas.
 - Crie gerenciamento de filas para sistemas de trabalho em segundo plano.
 
-para adicionarmos valores na lista podemos usar ``LPUSH`` e para remover ``RPOP/LPOP``
-```
+para adicionarmos valores na lista podemos usar ``LPUSH key value`` e para remover ``RPOP/LPOP key``, e podemos ver o tamanho da lista com ``LLEN``
 
 ```
+LPUSH minhalista 1
+```
+```
+LPOP minhalista 
+```
+```
+LLEN minhalista
+```
+[link](https://redis.io/docs/data-types/lists/){:target="_blank"}
 
 subscribe canal1
 publish canal1
