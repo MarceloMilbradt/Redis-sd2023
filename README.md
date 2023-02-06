@@ -1,6 +1,6 @@
-## REDIS
+# REDIS
 
-### Iinstalação
+## Instalação
 
 Criando um container chamado ``redis`` na porta ``6379`` com base na imagem do redis
 
@@ -14,7 +14,7 @@ Acessando o redis com o comando ``redis-cli``
 docker exec -it redis redis-cli
 ```
 
-### Usando redis
+## Usando redis
 para definir uma chave é possivel usar o comando ``set key value``
 
 ```
@@ -48,6 +48,10 @@ para apagar uma chave, existe o comando ``del key``
 ```
 del chave1
 ```
+
+## Tipo de dados
+### Lists
+
 
 
 subscribe canal1
