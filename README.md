@@ -2,16 +2,34 @@
 
 ## Instalação
 
+É possivel iniciar o redis de várias formas:
+
+### Manual
+
 Criando um container chamado ``redis`` na porta ``6379`` com base na imagem do redis
 
 ```
 sudo docker run --name redis -p 6379:6379 redis
 ```
+### Dockerfile
+
+Criando a partir de um dockerfile
+
+```
+docker build -t redis-image .
+```
+### docker-compose
+
+Com o docker compose
+
+```
+docker-compose up -d
+```
 
 Acessando o redis com o comando ``redis-cli``
 
 ```
-docker exec -it redis redis-cli
+docker exec -it redis-container redis-cli
 ```
 
 ## Usando redis
