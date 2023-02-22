@@ -9,7 +9,7 @@
 Criando um container chamado ``redis`` na porta ``6379`` com base na imagem do redis
 
 ```
-sudo docker run --name redis -p 6379:6379 redis
+sudo docker run --name redis-container -p 6379:6379 redis
 ```
 ### Dockerfile
 
