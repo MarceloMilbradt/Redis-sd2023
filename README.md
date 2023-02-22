@@ -1,5 +1,8 @@
 # REDIS
 
+- Marcelo
+- Gian
+
 ## Instalação
 
 É possivel iniciar o redis de várias formas:
